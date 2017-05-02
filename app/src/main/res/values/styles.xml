@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+
+    <style name="progressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/background_light</item>边框
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:background">@android:color/background_light</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明 背景色边框也就去掉了-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊  表示页面时候变暗，我们设置false，不变暗-->
+        <item name="android:windowContentOverlay">@null</item>
+
+
+    </style>
+</resources>
