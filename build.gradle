@@ -6,11 +6,11 @@ buildscript {
         google()
     }
     dependencies {
-        //classpath 'com.android.tools.build:gradle:2.3.0'
-        classpath 'com.android.tools.build:gradle:3.1.4'
+
+        classpath 'com.android.tools.build:gradle:3.3.0'
         //classpath 'com.android.tools.build:gradle-experimental:0.6.0-alpha8'
         //classpath "com.android.tools.build:gradle-experimental:0.7.0-alpha4"
-        //classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
         classpath 'me.tatarka:gradle-retrolambda:3.2.5'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -27,6 +27,7 @@ allprojects {
         jcenter()
 
         mavenCentral()
+        apply plugin: 'me.tatarka.retrolambda'//我是添加的
     }
 }
 
