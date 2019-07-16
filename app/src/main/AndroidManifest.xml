@@ -66,14 +66,23 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".activity.FirstActivity" >
+
+        </activity>
+        <activity android:name=".activity.SecondActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FirstActivity" />
-        <activity android:name=".activity.SecondActivity" />
         <activity android:name=".activity.CustomActivity">
 
             <!--
@@ -84,6 +93,7 @@
              </intent-filter>
             -->
         </activity>
+        <!--没用-->
         <activity
             android:name=".activity.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
