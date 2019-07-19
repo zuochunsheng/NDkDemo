@@ -15,11 +15,14 @@
 #include <stdio.h>
 #include <jni.h>
 #include <android/log.h>
+#include <com_dell_android_activity_FirstActivity.h>
+
 #define LOG_TAG "System.out"
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 
-jstring Java_com_dell_android_activity_FirstActivity_stringFromJNI( JNIEnv* env,jobject thiz ) {
+JNIEXPORT jstring JNICALL
+ Java_com_dell_android_activity_FirstActivity_stringFromJNI( JNIEnv* env,jobject thiz ) {
     LOGI("info\n");
     LOGD("debug\n");
     return (*env)->NewStringUTF(env, "Hello World  from JNI");

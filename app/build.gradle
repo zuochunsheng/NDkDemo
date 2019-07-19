@@ -27,12 +27,20 @@ android {
 //        }
 
         ndk {
-            moduleName "hello-l2c"  //hello-l2c  paramscallback
+            //moduleName "hello-l2c"  //hello-l2c  paramscallback
             //设置支持的SO库架构
             abiFilters  "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
            // "armeabi",
         }
 
+
+    }
+
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['src/main/libs']
+            jni.srcDirs = [] //屏蔽掉默认的jni编译生成过程
+        }
     }
     //lambda 必须 java 1.8
     compileOptions {

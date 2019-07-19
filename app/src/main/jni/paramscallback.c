@@ -32,7 +32,8 @@ char* _JString2CStr(JNIEnv* env, jstring jstr) {
 
 
 
-JNIEXPORT void JNICALL Java_com_dell_android_utils_JNICallback_callbackvoidmethod(JNIEnv *env, jobject clazz) {
+JNIEXPORT void JNICALL
+Java_com_dell_android_utils_JNICallback_callbackvoidmethod(JNIEnv *env, jobject clazz) {
 
 //jclass      (*FindClass)(JNIEnv*, const char*);
     //① 获取字节码对象

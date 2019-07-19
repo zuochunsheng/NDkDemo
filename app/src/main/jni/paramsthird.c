@@ -30,7 +30,8 @@ char* _JString2CStr(JNIEnv* env, jstring jstr) {
     return rtn;
 }
 
-JNIEXPORT jint  JNICALL Java_com_dell_android_utils_JNI_add(JNIEnv * env,jobject clazz,jint x,jint y ){
+JNIEXPORT jint  JNICALL
+Java_com_dell_android_utils_JNI_add(JNIEnv * env,jobject clazz,jint x,jint y ){
 
     return  x+y;
 }
@@ -41,7 +42,8 @@ JNIEXPORT jint  JNICALL Java_com_dell_android_utils_JNI_add(JNIEnv * env,jobject
  * Method:    sayHelloInC
  * Signature: (Ljava/lang/String;)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_dell_android_utils_JNI_sayHelloInC(JNIEnv * env, jobject clazz, jstring jstr){
+JNIEXPORT jstring JNICALL
+Java_com_dell_android_utils_JNI_sayHelloInC(JNIEnv * env, jobject clazz, jstring jstr){
     //调用工具方法把 java中的string 类型 转换成 C 语言中的 char*
     char* cstr = _JString2CStr(env,jstr);
     //调用strlen 获取 cstr 字符串的长度
@@ -58,7 +60,8 @@ JNIEXPORT jstring JNICALL Java_com_dell_android_utils_JNI_sayHelloInC(JNIEnv * e
  * Method:    arrElementsIncrease
  * Signature: ([I)[I
  */
-JNIEXPORT jintArray JNICALL Java_com_dell_android_utils_JNI_arrElementsIncrease(JNIEnv * env, jobject clazz, jintArray jArray){
+JNIEXPORT jintArray
+JNICALL Java_com_dell_android_utils_JNI_arrElementsIncrease(JNIEnv * env, jobject clazz, jintArray jArray){
     //jsize       (*GetArrayLength)(JNIEnv*, jarray);
     jsize length =(*env)->GetArrayLength(env,jArray);
     LOGD("length = %d",length);

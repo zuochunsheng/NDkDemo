@@ -25,9 +25,8 @@ allprojects {
        // maven { url "https://stomp.github.io" }
         google()
         jcenter()
-
         mavenCentral()
-        //apply plugin: 'me.tatarka.retrolambda'//我是添加的
+
     }
 }
 
